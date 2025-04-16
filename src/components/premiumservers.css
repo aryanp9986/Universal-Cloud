@@ -1,0 +1,114 @@
+.pservers, .pservers-body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: transparent;
+  color: #d1fffc;
+}
+
+.pservers .card {
+  width: 10rem;
+  position: relative;
+  background: #0f0f0f;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px #00ffe0aa, 0 0 20px #00ff88aa;
+  transition: transform 0.3s ease;
+}
+
+.pservers .card:hover {
+  transform: scale(1.02);
+}
+
+.pservers .card::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(270deg, #ff00ff, #00ffff, #ff00ff);
+  background-size: 600% 600%;
+  z-index: 0;
+  border-radius: 1.5rem;
+  animation: borderGlow 6s linear infinite;
+}
+
+.pservers .card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #0f0f0f;
+  border-radius: 1.5rem;
+  z-index: 1;
+  opacity: 0.95;
+}
+
+.pservers .card>* {
+  position: relative;
+  z-index: 2;
+}
+
+.pservers .buy-button {
+  background: linear-gradient(135deg, #ff00ff, #00ffff);
+  border: none;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  color: #000;
+  box-shadow: 0 0 15px #ff66ff99;
+  transition: 0.3s ease;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+
+.pservers .buy-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px #ff99ffbb;
+}
+
+.pservers .section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ff00ff;
+  text-shadow: 0 0 8px #ff00ff, 0 0 14px #cc00ff;
+}
+
+.pservers .neon-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ff66ff;
+  text-shadow: 0 0 5px #ff66ff, 0 0 10px #cc00cc;
+}
+
+@keyframes borderGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.pservers .back-button {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #1ed9ff;
+  font-weight: bold;
+  text-shadow: 0 0 5px #1ed9ff;
+  transition: color 0.3s ease;
+}
+
+.pservers .back-button:hover {
+  color: #00f0ff;
+}

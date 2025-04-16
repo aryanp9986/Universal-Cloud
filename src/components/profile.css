@@ -1,0 +1,23 @@
+.profile {
+  background-color: #0f0f0f;
+  color: white;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile .neon {
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.profile .neon-border {
+  box-shadow: 0 0 10px #0ff, 0 0 20px #0ff;
+}
+
+.profile .tab-active {
+  border-color: #0ff !important;
+  color: #0ff !important;
+}
+
+.profile .modal {
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
+}

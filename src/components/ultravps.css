@@ -1,0 +1,113 @@
+.uvps, .uvps-body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* background-color: #0a0a0a; */
+  color: #fff3ec;
+}
+
+.uvps .card {
+  position: relative;
+  background: #1a1a1a;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 15px #ff6ec7aa, 0 0 25px #ffb3ecaa;
+  transition: transform 0.3s ease;
+}
+
+.uvps .card:hover {
+  transform: scale(1.03);
+}
+
+.uvps .card::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(270deg, #ff6ec7, #ffb3ec, #ff6ec7);
+  background-size: 600% 600%;
+  z-index: 0;
+  border-radius: 1.5rem;
+  animation: borderFlow 7s linear infinite;
+}
+
+.uvps .card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #1a1a1a;
+  border-radius: 1.5rem;
+  z-index: 1;
+  opacity: 0.95;
+}
+
+.uvps .card>* {
+  position: relative;
+  z-index: 2;
+}
+
+.uvps .buy-button {
+  background: linear-gradient(135deg, #ff6ec7, #ffb3ec);
+  border: none;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  color: #000;
+  box-shadow: 0 0 20px #ff99d699;
+  transition: 0.3s ease;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+
+.uvps .buy-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px #ffc0f1bb;
+}
+
+.uvps .section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #ff6ec7;
+  text-shadow: 0 0 8px #ff6ec7, 0 0 14px #ffb3ec;
+}
+
+.uvps .neon-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #ffb3ec;
+  text-shadow: 0 0 5px #ffb3ec, 0 0 10px #ff6ec7;
+}
+
+@keyframes borderFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.uvps .back-button {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #fb6ec7;
+  font-weight: bold;
+  text-shadow: 0 0 5px #ffb3ec;
+  transition: color 0.3s ease;
+}
+
+.uvps .back-button:hover {
+  color: #00f0ff;
+}

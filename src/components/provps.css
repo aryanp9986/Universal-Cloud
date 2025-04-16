@@ -1,0 +1,113 @@
+.pvps, .pvps-body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  /* background-color: #000814; */
+  color: #d0e7ff;
+}
+
+.pvps .card {
+  position: relative;
+  background: #001d3d;
+  border-radius: 1.5rem;
+  padding: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 0 10px #0096c7aa, 0 0 20px #00b4d8aa;
+  transition: transform 0.3s ease;
+}
+
+.pvps .card:hover {
+  transform: scale(1.02);
+}
+
+.pvps .card::before {
+  content: '';
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  right: -4px;
+  bottom: -4px;
+  background: linear-gradient(270deg, #00b4d8, #48cae4, #00b4d8);
+  background-size: 600% 600%;
+  z-index: 0;
+  border-radius: 1.5rem;
+  animation: borderGlow 6s linear infinite;
+}
+
+.pvps .card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: #001d3d;
+  border-radius: 1.5rem;
+  z-index: 1;
+  opacity: 0.95;
+}
+
+.pvps .card>* {
+  position: relative;
+  z-index: 2;
+}
+
+.pvps .buy-button {
+  background: linear-gradient(135deg, #00b4d8, #48cae4);
+  border: none;
+  border-radius: 9999px;
+  padding: 0.75rem 1.5rem;
+  font-weight: 700;
+  color: #000;
+  box-shadow: 0 0 15px #00e0ff99;
+  transition: 0.3s ease;
+  text-align: center;
+  display: inline-block;
+  width: 100%;
+}
+
+.pvps .buy-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 25px #90e0efbb;
+}
+
+.pvps .section-title {
+  font-size: 3rem;
+  font-weight: 800;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #00b4d8;
+  text-shadow: 0 0 8px #00b4d8, 0 0 14px #48cae4;
+}
+
+.pvps .neon-title {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #90e0ef;
+  text-shadow: 0 0 5px #90e0ef, 0 0 10px #00b4d8;
+}
+
+@keyframes borderGlow {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.pvps .back-button {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #1ed9ff;
+  font-weight: bold;
+  text-shadow: 0 0 5px #1ed9ff;
+  transition: color 0.3s ease;
+}
+
+.pvps .back-button:hover {
+  color: #00f0ff;
+}

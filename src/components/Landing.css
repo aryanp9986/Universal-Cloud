@@ -1,0 +1,233 @@
+@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Orbitron", sans-serif;
+}
+
+.landing-main,
+.landing-body {
+  background: transparent;
+  overflow-x: auto;
+  position: relative;
+}
+
+.landing-main canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.landing-main .landing {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 2rem;
+  background: transparent;
+  border-radius: 20px;
+  border: 2px solid #00f0ff;
+  box-shadow: 0 0 25px #00f0ff, 0 0 60px #00f0ff inset;
+  max-width: 800px;
+  margin: 5vh auto;
+}
+
+.landing-main .logo-wrapper {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 50%;
+  border: 4px solid #00f0ff;
+  box-shadow: 0 0 25px #00f0ff, 0 0 80px #00f0ff;
+  margin-bottom: 1.5rem;
+  animation: fadeScale 1s ease forwards;
+}
+
+.landing-main .logo-img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  border-radius: 50%;
+}
+
+@keyframes fadeScale {
+  0% {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.landing-main .title {
+  font-size: 2.7rem;
+  color: #00f0ff;
+  text-shadow: 0 0 20px #00f0ff;
+  margin-bottom: 0.7rem;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+.landing-main .subtitle {
+  color: #aaa;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  animation: fadeIn 1.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.landing-main .slider {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem;
+  padding: 1rem 0 2rem;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.landing-main .slider::-webkit-scrollbar {
+  display: none;
+}
+
+.landing-main .card {
+  min-width: 260px;
+  background: rgba(0, 255, 255, 0.07);
+  border: 2px solid transparent;
+  border-radius: 20px;
+  padding: 1.2rem;
+  flex: none;
+  scroll-snap-align: center;
+  box-shadow: 0 0 15px #00f0ff44, 0 0 25px #00f0ff22;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+  animation: fadeIn 0.6s ease;
+}
+
+.landing-main .card:hover {
+  transform: scale(1.05);
+  border-image: linear-gradient(45deg, #00f0ff, #00d0ff, #00f0ff) 1;
+  box-shadow: 0 0 25px #00f0ff, 0 0 50px #00f0ff44;
+}
+
+.landing-main .icon {
+  font-size: 2.5rem;
+  color: #00f0ff;
+  margin-bottom: 0.4rem;
+  text-shadow: 0 0 10px #00f0ff;
+}
+
+.landing-main .card h3 {
+  color: #00f0ff;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+}
+
+.landing-main .card p {
+  color: #ccc;
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+.landing-main .buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  align-items: center;
+  margin-top: 1.5rem;
+}
+
+.landing-main .btn {
+  background: transparent;
+  color: #00f0ff;
+  border: 2px solid #00f0ff;
+  padding: 0.9rem 2rem;
+  font-size: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px #00f0ff inset;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 80%;
+  margin: 10px 0;
+}
+
+.landing-main .btn a {
+  display: block;
+  text-decoration: none;
+  color: #00d0ff;
+}
+
+.landing-main .btn:hover {
+  background: #00f0ff;
+  color: #000;
+  box-shadow: 0 0 25px #00f0ff, 0 0 40px #00f0ff;
+}
+
+.landing-main .btn a:hover {
+  color: #000;
+}
+
+.landing-main .letsgo-btn {
+  background: #00f0ff;
+  color: #000;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 15px;
+  box-shadow: 0 0 15px #00f0ff, 0 0 35px #00f0ff;
+}
+
+.landing-main .letsgo-btn a {
+  display: block;
+  color: #000;
+}
+
+.landing-main .letsgo-btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 25px #00f0ff, 0 0 50px #00f0ff;
+}
+
+@media (max-width: 600px) {
+  .landing-main .logo-img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .landing-main .title {
+    font-size: 2.1rem;
+  }
+
+  .landing-main .btn,
+  .landing-main .letsgo-btn {
+    width: 100%;
+    font-size: 1rem;
+  }
+
+  .landing-main .card {
+    min-width: 200px;
+  }
+}
+
+/* Extra scrollable content */
+.landing-main .extra-section {
+  padding: 5rem 2rem;
+  text-align: center;
+  color: white;
+  font-size: 1.2rem;
+}

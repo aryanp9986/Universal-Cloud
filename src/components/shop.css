@@ -1,0 +1,46 @@
+.shop .shop-body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.shop .neon-text {
+  color: #00ffff;
+  text-shadow: 0 0 8px #00ffff, 0 0 12px #00ffff;
+}
+
+.shop .category-card {
+  background: linear-gradient(145deg, #111, #0a0a0a);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.2), 0 0 30px rgba(0, 255, 255, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.4s ease, background 0.3s;
+}
+
+.shop .category-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 0 25px rgba(0, 255, 255, 0.5), 0 0 50px rgba(0, 255, 255, 0.2);
+  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
+}
+
+.shop .glow-border {
+  border: 2px solid transparent;
+  border-image: linear-gradient(90deg, #0ff, #39ff14, #f0f) 1;
+  border-image-slice: 1;
+}
+
+.shop .neon-subtext {
+  color: #bbb;
+  text-shadow: 0 0 5px rgba(255, 255, 255, 0.2);
+}
+
+.shop .back-button {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: #1ed9ff;
+  font-weight: bold;
+  text-shadow: 0 0 5px #1ed9ff;
+  transition: color 0.3s ease;
+}
+
+.shop .back-button:hover {
+  color: #00f0ff;
+}
